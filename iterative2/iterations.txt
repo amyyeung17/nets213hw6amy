@@ -1,0 +1,24 @@
+1/2 - 1 (not changed), 1, 1 (not changed), 2, 1 (1 true&true - corrected), 2, 1 (1 true&true), 2  (2 true, 1 false - corrected), 1 , 1, 1 , 2, 1 (not changed), 1, 1 (not changed)
+- 10 = 1, 4 not changed 
+
+2/3- 1, 1, 1 (not changed), 1 (not changed), 1, 1, 1 (not changed), 1, 1, 1, 1 (not changed), 1, 1 (not changed), 1, 1 ( not changed)
+- 6 not changed 
+
+3/4 - 2, 2, 2, 1, 1 (1 true, not changed), 1 (not changed), 2, 2, 1, 1, 1, 1, 1, 2, 1 (not changed but results differ)
+- 9 = 4 not changed 
+
+1 - changed at 4th 1 (nc) -> 1 -> 2 
+2 - changed at 4th 1 -> 1 -> 2 
+3 - changed at 4th 1 (nc) -> 1 (nc) -> 2 
+4 - 2nd iteration 2 -> 1 (nc) -> 1
+5 - 1st iteration 1 -> 1 -> 1 (nc)
+6 - 2nd iteration 2 -> 1 -> 1 (nc)
+7 - 4th iteration 1 -> 1 (nc) -> 2
+8 - 4th iteration 2 -> 1 -> 2 
+9 - 1st iteration 1 -> 1 -> 1
+10 - 1st iteration 1 -> 1 -> 1 
+11 -  1st iteration 1 -> 1 (nc) -> 1
+12 - 2nd iteration 2 -> 1 -> 1
+13 - 1st iteration (changes) 1 (nc) -> 1 (nc) -> 1 
+14 - 1st -> 4th iteration 1 -> 1 -> 2 
+15 - 1st iteration (no changes) 1 (nc) -> 1 (nc) -> 1 (nc)

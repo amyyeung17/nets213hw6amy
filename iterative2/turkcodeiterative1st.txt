@@ -1,0 +1,62 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+<head>
+    <style>
+    .image {
+        display:flex;
+        justify-content:center;
+    }
+    </style>
+</head>
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+    
+
+    <h3>
+      <strong>Instructions: </strong>
+    </h3>
+    <p>Please describe the image below as factually as possible to the best of your ability. (150 characters max) There are no incorrect answers. If an example is needed, please click on the button below. </p>
+    
+    <crowd-instructions link-text = "Further Instructions and Examples" link-type = "button">
+        <short-summary>
+            <p>Write a short description for each image shown in the task. </p>
+            </short-summary>
+        <detailed-instructions>
+            <p> The description can be as simple as you want as long as it clearly describes the image.
+                Try to be as objective as possible when answering. </p>
+            </detailed-instructions>
+        <positive-example>
+            <img src = "https://images.pexels.com/photos/2859616/pexels-photo-2859616.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" width = "250px"/>
+            <p><strong>Example description:</strong></p>
+            <p>A girl with black hair looking up with a rainbow on her face in a dark room.</p>
+            </positive-example>
+        </crowd-instructions>
+        
+    <div>
+        <script type="text/javascript"/>
+            const c = (obj) => {
+                document.getElementById("counter").innerHTML = obj.value.length + "/150 characters"
+            }
+        </script>
+    </div>
+        
+
+
+    <!-- Your image file URLs will be substituted for the "image_url" variable below 
+          when you publish a batch with a CSV input file containing multiple image file URLs.
+          To preview the element with an example image, try setting the src attribute to
+          "https://s3.amazonaws.com/cv-demo-images/basketball-outdoor.jpg" -->
+    <div class ="image">
+        <p><img src="${image_url}" style="max-width: 100%; max-height: 250px; display: flex; justify-content: center;" /></p>
+    </div>
+
+    <crowd-input label="Start describing here" name="summary" max-length="150" onkeyup="c(this)" required></crowd-input>
+    <p id ="counter"></p>
+    
+ 
+
+</crowd-form>
